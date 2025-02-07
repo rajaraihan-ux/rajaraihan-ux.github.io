@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloudy Font Style</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to bottom, #ffe9d6, #ffd1b3);
+            overflow: hidden;
+        }
+
+        .cloudy-text {
+            font-family: 'Arial', sans-serif;
+            font-size: 5rem;
+            font-weight: bold;
+            color: #ffffff;
+            position: relative;
+            text-shadow: 
+                2px 2px 0px #ffa085, 
+                -2px -2px 0px #ffa085, 
+                -2px 2px 0px #ffa085, 
+                2px -2px 0px #ffa085,
+                4px 4px 0px #ff8474,
+                -4px -4px 0px #ff8474;
+        }
+
+        .cloudy-text::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            background: radial-gradient(circle, #ffffff 60%, rgba(255, 255, 255, 0) 80%);
+            filter: blur(20px);
+            z-index: -1;
+        }
+
+        .cloud {
+            position: absolute;
+            background: radial-gradient(circle, #ffffff 60%, rgba(255, 255, 255, 0) 80%);
+            filter: blur(15px);
+            border-radius: 50%;
+        }
+
+        .cloud:nth-child(1) {
+            width: 150px;
+            height: 150px;
+            top: 10%;
+            left: 20%;
+        }
+
+        .cloud:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            top: 20%;
+            right: 25%;
+        }
+
+        .cloud:nth-child(3) {
+            width: 120px;
+            height: 120px;
+            bottom: 15%;
+            left: 30%;
+        }
+
+        .cloud:nth-child(4) {
+            width: 180px;
+            height: 180px;
+            bottom: 10%;
+            right: 20%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cloudy-text">ANNGOTA</div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warriors of Cancer</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #ffe9d6, #ffd1b3);
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header a {
+            text-decoration: none;
+            color: black;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        header .logo {
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+            color: #ffffff;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 0px #ffa085, -2px -2px 0px #ffa085, 4px 4px 0px #ff8474;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            color: #d16c90;
+        }
+
+        .hero button {
+            background-color: #5c5c5c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .image-section {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            width: 80%; /* Memperbesar gambar */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-section {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            border-radius: 15px;
+            max-width: 1200px;
+        }
+
+        .gallery-section h1 {
+            font-size: 2.5rem;
+            color: #ff8474;
+            text-shadow: 2px 2px 5px rgba(255, 132, 116, 0.5);
+            margin-bottom: 30px;
+        }
+
+        /* Menata gambar-gambar secara vertikal (atas-bawah) */
+        .gallery {
+            display: flex;
+            flex-direction: column; /* Gambar ditata vertikal */
+            gap: 30px; /* Jarak antar gambar lebih besar */
+            align-items: center; /* Menyusun gambar di tengah */
+        }
+
+        .gallery img {
+            width: 90%; /* Lebar gambar lebih besar */
+            max-width: 800px; /* Lebar maksimum gambar */
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Cloud styling */
+        .cloud {
+            position: absolute;
+            background: radial-gradient(circle, #ffffff 60%, rgba(255, 255, 255, 0) 90%);
+            border-radius: 50%;
+            filter: blur(20px);
+        }
+
+        .cloud.small {
+            width: 100px;
+            height: 60px;
+        }
+
+        .cloud.medium {
+            width: 150px;
+            height: 80px;
+        }
+
+        .cloud.large {
+            width: 200px;
+            height: 120px;
+        }
+
+        .cloud:nth-child(1) {
+            top: 10%;
+            left: 20%;
+        }
+
+        .cloud:nth-child(2) {
+            top: 15%;
+            right: 25%;
+        }
+
+        .cloud:nth-child(3) {
+            bottom: 20%;
+            left: 15%;
+        }
+
+        .cloud:nth-child(4) {
+            bottom: 10%;
+            right: 20%;
+        }
+
+        .cloud:nth-child(5) {
+            top: 5%;
+            left: 50%;
+        }
+
+        /* Media Queries untuk Responsiveness */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            header nav {
+                margin-top: 10px;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            .image-section img {
+                width: 100%;
+            }
+
+            .gallery-section h1 {
+                font-size: 2rem;
+            }
+
+            .gallery img {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.5em;
+            }
+
+            .hero p {
+                font-size: 0.9em;
+            }
+
+            .hero button {
+                font-size: 0.9em;
+                padding: 8px 16px;
+            }
+
+            .gallery-section h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">KANKER PARU-PARU.</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Praktek</a>
+            <a href="#">Lampiran</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>WARRIORS OF CANCER</h1>
+        <p><strong>WORLD CANCER DAY</strong><br>Stronger lungs, brighter tomorrow</p>
+        <button>Start Now</button>
+    </section>
+
+    <div class="image-section">
+        <img src="WhatsApp Image 2025-02-04 at 11.44.03.jpeg" alt="Group Photo">
+    </div>
+
+    <div class="gallery-section">
+        <h1></h1>
+        <div class="gallery">
+            <img src="anggota.png" alt="Anggota Image">
+            <img src="stronger lungs.png" alt="Stronger Image">
+            <img src="tujuan.png" alt="Tujuan Image">
+        </div>
+    </div>
+
+    <!-- Clouds -->
+    <div class="cloud small"></div>
+    <div class="cloud medium"></div>
+    <div class="cloud large"></div>
+    <div class="cloud medium"></div>
+    <div class="cloud small"></div>
+</body>
+</html>
